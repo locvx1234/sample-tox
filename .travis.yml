@@ -8,8 +8,12 @@ branches:
 
 env:
   - PYTHONPATH=.
+install: 
+  - pip install tox
 
-script: tox
+script: 
+  - tox
+
 notifications:
   email:
     recipients:
