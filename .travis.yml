@@ -8,8 +8,8 @@ branches:
   only:
   - master
 
-env:
-  - PYTHONPATH=.
+#env:
+#  - PYTHONPATH=.
 install: 
   - pip install tox
 
