@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 # To use a consistent encoding
 from codecs import open
 from os import path
@@ -6,7 +6,7 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the README file
-with open(path.join(here, 'README.md'), encoding='utf-8') as f:
+with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
@@ -17,6 +17,12 @@ setup(
     url='https://github.com/locvx1234/sample-tox',  # Optional
     author='LocVU',  # Optional
     author_email='locvx1234@gmail.com',  # Optional
+    extras_require={
+        'dev': [
+            'pytest>=3',
+            'tox',
+        ],
+    },
     classifiers=[  # Optional
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
@@ -30,5 +36,5 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     keywords='tox sample setuptools development',  # Optional
-    packages=find_packages(exclude=['contrib', 'docs', 'tests']),  # Required
+    packages=['maths'],
 )
